@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f1f3f5;
+}
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-shrink: 0;
+  font-size: 0.9375rem;
+  color: #495157;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  height: 3.125rem;
+  padding: 0 1rem;
+  
+}
+.logo-heading {
+  text-decoration: none;
+  align-self: center;
+  letter-spacing: 0.1rem;
+  font-size: 1.5rem;
+  color: rgb(73, 81, 87);
+}
+.nav-items {
+  align-self: center;
+}
+.nav-items > ul {
+  list-style-type: none;
+  display: flex;
+}
+.nav-items > ul li a {
+  padding: 10px;
+  color: rgb(73, 81, 87);
+  text-decoration: none;
+  list-style: none;
+}
+.container {
+  width: 1300px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.card_group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 1rem;
+}
+.card_group a{
+  list-style: none;
+  text-decoration: none;
+  color: #495157;
+  flex: 0 1 250px ;
+}
+.card {
+  
+  background: hsla(0, 0%, 100%, 0.5);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 0.1875rem;
+  transition: 0.3s;
+  font-size: 0.75rem;
+  padding: 20px;
+}
+.card h3 {
+  font-size: 17px;
+  font-weight: 500;
+  word-break: break-word;
+}
+.card p {
+  color: #686b78;
+  font-size: 13px;
+  margin-top: 4px;
+}
+.restaurant_info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.restaurant_info p:nth-child(2){
+  align-self: center;
+}
+.card > .restaurant_info > .rating {
+  background-color: #db7c38;
+  color: #fff;
+  height: 20px;
+  width: 43px;
+  padding: 0 5px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.card > img {
+  width: 100%;
+}
+.search_container {
+  padding: 0 1rem;
+  margin: 60px 0;
+}
+.search_container > input {
+  outline: none;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+.search_container > button {
+  border: 0;
+  padding: 10px 20px;
+  background-color: #db7c38;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  margin-left: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+.shimmer_cardgroup {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 1rem;
+  margin-top: 120px;
+}
+.shimmer_card {
+  flex: 1 0 250px;
+  min-height: 300px;
+  background: hsla(0, 0%, 100%, 0.5);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 0.1875rem;
+  transition: 0.3s;
+  font-size: 0.75rem;
+  padding: 20px;
+}
+
+.shimmer_image {
+  width: 100%;
+  min-height: 200px;
+  background-color: #9aa4adc2;
+}
+.shimmer_rest_content {
+  width: 70%;
+  min-height: 30px;
+  background-color: #9aa4adc2;
+  margin-top: 20px;
+}
+.retaurant_menu_Banner{
+  background-color: #171a29;
+  color: #fff;
+  height: 245px;
+  display: flex;
+  align-items: center;
+  
+}
+.info_align{
+  display: flex;
+  gap: 40px;
+}
+.menu_image{
+  height: 165px;
+}
+.menu_image img{
+  height: 100%;
+}
+.restaurant_basic_info h1{
+  font-weight: 300;
+  font-size: 32px;
+}
+.restaurant_basic_info p{
+  opacity: .7;
+  font-size: 15px;
+  margin-top: 8px;
+}
+
+.main_menu{
+margin-top: 50px;
+}
+.header button{
+  border-radius: 3px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: .875rem;
+  height: 32px;
+  line-height: 30px;
+  padding: 0 16px;
+  transition: all 250ms;
+  background: #db7c38;
+  border: 1px solid #db7c38;
+  color: #f4f5f7;
+  align-self: center;
+}
+.about{
+  padding: 40px 0;
+}
+.about .Profile{
+  width: 30%;
+  text-align: center;
+  background: hsla(0, 0%, 100%, 0.5);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 0.1875rem;
+  transition: 0.3s;
+  font-size: 1rem;
+  padding: 20px;
+  color: #495157;
+}
+.Profile img{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 1rem;
+}

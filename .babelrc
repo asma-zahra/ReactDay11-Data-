@@ -1,0 +1,4 @@
+// just remove consoe-log ,exclude error and warning
+{
+    // "plugins": [ ["transform-remove-console", { "exclude": [ "error", "warn"] }] ]
+  }
