@@ -2,18 +2,16 @@ import Shimmer from "./Shimmer";
 import RestaurantCard from "./restaurauntCard";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import {filterData} from '.././Utils/Helper'
+import useOnline from "../Utils/useOnline";
 
-function filterData(searchText, restaurantList) {
-  return restaurantList.filter((item) => item?.data?.name?.toLowerCase()?.includes(searchText.toLowerCase()));
-}
 
-const BodyComponent = () => {
+const BodyComponent = ({user}) => {
   const [filteredRestaurantList, setfilteredRestaurant] = useState([]);
   const [restaurantList, setRestaurantList] = useState([]);
   const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
-    
     console.log("render-useEffect callback");
     getSwiiggyData();
   }, []);
@@ -27,6 +25,16 @@ const BodyComponent = () => {
     console.log(json);
     setfilteredRestaurant(json?.data?.cards[2]?.data?.data?.cards);
     setRestaurantList(json?.data?.cards[2]?.data?.data?.cards);
+  }
+
+  const isOnlineStatus = useOnline();
+  console.log(useOnline("")); //returns true
+  if (!isOnlineStatus){
+    return(
+      <>
+        <h1>Sorry!!, Check your Internet Connection</h1>
+      </>
+    )
   }
 
   if(!restaurantList) return null;
@@ -65,7 +73,7 @@ const BodyComponent = () => {
         {filteredRestaurantList.map((item) => {
             return(
             <Link to={"/restaurant/"+ item.data.id} key={item.data.id}>
-             <RestaurantCard  {...item.data} />
+             <RestaurantCard  {...item.data} userProp = {user} />
              </Link>)
           })}
         </div>

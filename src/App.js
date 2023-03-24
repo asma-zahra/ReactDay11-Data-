@@ -1,4 +1,4 @@
-import React from "react";
+import React ,{lazy, Suspense, useState} from "react";
 import ReactDOM from "react-dom/client";
 import HeaderComponent from "./Components/Header";
 import { FooterComponent } from "./Components/Footer";
@@ -10,8 +10,12 @@ import Body from "./Components/Body"
 import Error from "./Components/Error";
 import RestaurantMenu from "./Components/ReastaurantMenu";
 import Profile from "./Components/Profile";
+import Shimmer from "./Components/Shimmer";
+const InstaMart = lazy(()=> import("./Components/Instamart"));
 
 const AppLayout = () => {
+  const {users, setusers} = useState({name: "Foodvilla user",
+account:"foodvilla account"})
   return (
     <>
       <HeaderComponent />
@@ -29,7 +33,8 @@ const appRouter = createBrowserRouter([
     children: [
       {
         path:"/",
-        element: <Body/>
+        element: <Body user= {{name: "Foodvilla user",
+        account:"foodvilla account"}}/>
       },
       {
         path:"/about",
@@ -45,8 +50,18 @@ const appRouter = createBrowserRouter([
         element: <Contact/>
       },
       {
-        path:"/restaurant/:id",
+        path:"/restaurant/:resid",
         element: <RestaurantMenu/>
+      },
+      {
+        path:"/cart",
+        element: <cart/>
+      },
+      {
+        path:"/instamart",
+        element: <Suspense fallback= {<Shimmer/>}>
+            <InstaMart/>
+        </Suspense>
       },
     ]
   },

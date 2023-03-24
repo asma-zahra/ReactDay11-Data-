@@ -1,6 +1,6 @@
 
 import { image_Url } from "../Config";
-const RestaurantCard = ({name , cuisines , avgRating ,cloudinaryImageId , costForTwoString}) => {
+const RestaurantCard = ({name , cuisines , avgRating ,cloudinaryImageId , costForTwoString, userProp,}) => {
     return (
       
       <div className="card ">
@@ -10,6 +10,7 @@ const RestaurantCard = ({name , cuisines , avgRating ,cloudinaryImageId , costFo
         <div className="restaurant_info">
          <p className="rating">{avgRating} stars</p> 
          <p>{costForTwoString}</p>
+         <h4>{userProp.name}</h4>
         </div>
       </div>
       
